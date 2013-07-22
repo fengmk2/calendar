@@ -71,6 +71,11 @@
       var large = new Calendar;
       large.addClass('large');
       large.el.appendTo('body');
+      large.showMonthSelect();
+      large.showYearSelect();
+      large.on('view change', function (date, action) {
+        console.log(arguments)
+      });
     </script>
   </body>
 </html>
