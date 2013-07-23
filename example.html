@@ -94,9 +94,11 @@
       large.showEvents({
         '2013-7-2': '父亲节',
         '2013-7-10': ['母亲节', '中秋']
+      }, function (name) {
+        return '**' + name + '**';
       });
 
-      large.today(large.range().last);
+      // large.today(large.range().last);
       console.log(large.range());
     </script>
   </body>
