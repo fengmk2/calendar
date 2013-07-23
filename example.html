@@ -10,15 +10,17 @@
         color: #333;
       }
       
-      .calendar.large {
-        float: left;
-        clear: both;
+      .calendar.large table {
+        /*float: left;*/
+        /*clear: both;*/
+        width: 100%
       }
       
       .calendar.large tbody td {
-        padding: 50px;
+        padding: 50px 0;
         border: 1px solid #eee;
         position: relative;
+        text-align: left;
       }
       
       .calendar.large tbody a {
@@ -42,6 +44,14 @@
     <script src="build/build.js"></script>
     <script>
       var Calendar = require('calendar');
+      Calendar.setMonths([
+        '一月', '二月', '三月', '四月', '五月', '六月',
+        '七月', '八月', '九月', '十月', '十一月', '十二月'
+      ]);
+      Calendar.setDays([
+         '星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'
+      ]);
+
       var one = new Calendar().showMonthSelect().showYearSelect();
 
       one.on('view change', function(date, action){
@@ -58,7 +68,7 @@
           date.getFullYear());
         var newDate = new Date(date);
         newDate.setMonth(date.getMonth() + 1);
-        large.select(newDate);
+        // large.select(newDate);
       });
 
       one.el.appendTo('body');
@@ -75,7 +85,17 @@
       large.showYearSelect();
       large.on('view change', function (date, action) {
         console.log(arguments)
+        large.showEvents({
+          '2013-07-02': '父亲节',
+          '2013-07-10': ['母亲节', '中秋']
+        });
       });
+
+      large.showEvents({
+        '2013-7-2': '父亲节',
+        '2013-7-10': ['母亲节', '中秋']
+      });
+      console.log(large.range());
     </script>
   </body>
 </html>
