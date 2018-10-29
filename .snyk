@@ -1,0 +1,40 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:minimatch:20160620':
+    - jquery-component > grunt-git-authors > grunt > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > grunt > findup-sync > glob > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > load-grunt-tasks > findup-sync > glob > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > grunt-bower-task > bower > glob > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > grunt-bower-task > bower > fstream-ignore > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > grunt-git-authors > grunt > findup-sync > glob > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > grunt > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > grunt > glob > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > grunt-cli > findup-sync > glob > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > load-grunt-tasks > globule > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > grunt-git-authors > grunt > glob > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > load-grunt-tasks > globule > glob > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > grunt-contrib-watch > gaze > globule > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > grunt-jscs-checker > jscs > glob > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > grunt-contrib-watch > gaze > globule > glob > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > grunt-contrib-jshint > jshint > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
+    - jquery-component > grunt-jscs-checker > jscs > minimatch:
+        patched: '2018-10-29T00:54:22.281Z'
