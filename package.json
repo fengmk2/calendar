@@ -2,14 +2,21 @@
   "name": "calendar-component",
   "description": "Calendar component",
   "version": "0.0.4",
-  "keywords": ["calendar", "date", "ui"],
+  "keywords": [
+    "calendar",
+    "date",
+    "ui"
+  ],
   "dependencies": {
     "jquery-component": "*",
     "emitter-component": "*",
-    "in-groups-of": "*"
+    "in-groups-of": "*",
+    "snyk": "^1.317.0"
   },
   "component": {
-    "styles": ["lib/calendar.css"],
+    "styles": [
+      "lib/calendar.css"
+    ],
     "scripts": {
       "calendar/index.js": "index.js",
       "calendar/lib/utils.js": "lib/utils.js",
@@ -17,5 +24,10 @@
       "calendar/lib/calendar.js": "lib/calendar.js",
       "calendar/lib/days.js": "lib/days.js"
     }
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
